@@ -21,7 +21,7 @@ height = st.number_input('Tinggi Badan (cm)', min_value=0, max_value=120)
 gender_encoded = 0 if gender == 'Perempuan' else 1
 
 # Preprocess the user input
-user_input = np.array([[age, gender, height]])
+user_input = np.array([[age, gender_encoded, height]])
 user_input_scaled = scaler.transform(user_input)
 
 # Predict the status
