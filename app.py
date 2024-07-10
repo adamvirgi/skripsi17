@@ -18,6 +18,8 @@ age = st.number_input('Usia (bulan)', min_value=0, max_value=60)
 gender = st.selectbox('Jenis Kelamin', ['Perempuan', 'Laki-laki'])
 height = st.number_input('Tinggi Badan (cm)', min_value=0, max_value=120)
 
+gender_encoded = 0 if gender == 'Perempuan' else 1
+
 # Preprocess the user input
 user_input = np.array([[age, gender, height]])
 user_input_scaled = scaler.transform(user_input)
